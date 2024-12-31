@@ -1,4 +1,4 @@
-name: WinKalb
+name: WinKalbb
 
 on: [push, workflow_dispatch]
 
@@ -26,5 +26,8 @@ jobs:
     - name: show ip
       run: ipconfig
     - name: Launch rust
-      run: rustdesk.exe
+      run: |
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mobitab333/chgit3/refs/heads/main/rust.bat" -OutFile "rust.bat"
+          cmd /c rust.bat
+
       
