@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Download rust
 #      run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
-      run: Invoke-WebRequest https://github.com/rustdesk/rustdesk/releases/download/1.2.1/rustdesk-1.2.1-x86_64.exe -OutFile rustdesk.exe
+      run: Invoke-WebRequest https://github.com/rustdesk/rustdesk/releases/download/1.2.1/rustdesk-1.2.1-x86_64.exe -OutFile c:\windows\rustdesk.exe
 
 #    - name: Extract
 #      run: Expand-Archive ngrok.zip
@@ -25,4 +25,6 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "@cyb3rking" -Force)
     - name: Create Tunnel
 #      run: .\ngrok\ngrok.exe tcp 3389
-      run: .\rustdesk.exe
+      run: ipconfig
+      run: rustdesk.exe
+      
