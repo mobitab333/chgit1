@@ -1,4 +1,4 @@
-name: WinBhim
+name: WinKalb
 
 on: [push, workflow_dispatch]
 
